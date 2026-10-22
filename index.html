@@ -56,6 +56,13 @@
     }
 
     .photo-placeholder {
+      .travel-photo {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #e1d4bd;
+}
       min-height: 260px;
       background: #d9d1bf;
       display: flex;
@@ -136,26 +143,11 @@
 
   <main>
     <section class="postcard">
-      <div class="photo-placeholder">
-        <div>
-          <div style="font-size: 42px;">✉</div>
-          <div>未来的旅行照片，将从这里开始收藏</div>
-          <div style="font-size: 12px;">YOUR PHOTO GOES HERE</div>
-        </div>
-      </div>
-
-      <div class="caption">
-        <p class="date">OUR FIRST POSTCARD · 2026</p>
-        <h2>下一站，我们去哪里？</h2>
-
-        <p class="message">
-          世界很大，见面的日子很珍贵。<br>
-          把走过的城市、看过的风景，<br>
-          还有那些不想忘记的小事，<br>
-          一张一张，寄给未来的我们。
-        </p>
-      </div>
-    </section>
+    <img
+  class="travel-photo"
+  src="first-trip.jpg"
+  alt="我们的第一次旅行风景"
+/>
 
     <section class="memories">
       <article class="memory">
