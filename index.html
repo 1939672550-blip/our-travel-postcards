@@ -66,6 +66,34 @@ object-fit: contain;
 }
     }
 
+    
+.postmark {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin: 8px 0 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed #c9b69a;
+  color: #8b7258;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.postmark-number {
+  border: 1px dashed #a58b6b;
+  padding: 5px 8px;
+}
+
+.postmark-city {
+  font-size: 13px;
+}
+
+.postmark-date {
+  margin-left: auto;
+  font-family: Georgia, serif;
+}
+
     .caption {
       padding: 20px 8px 10px;
     }
@@ -140,7 +168,13 @@ object-fit: contain;
         alt="我们的第一次旅行风景"
       >
 <div class="caption">
-  <p class="date">2022.02.17 · CHANGSHA, CHINA</p>
+  <p class="date">
+<div class="postmark">
+  <span class="postmark-number">NO. 001</span>
+  <span class="postmark-city">CHANGSHA · 长沙</span>
+  <span class="postmark-date">2022.02.17</span>
+</div>
+ · CHANGSHA, CHINA</p>
 
   <h2>长沙，四个人的第一次</h2>
 
