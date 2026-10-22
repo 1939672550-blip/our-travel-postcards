@@ -180,6 +180,76 @@
         margin-left: 0;
       }
     }
+    
+/* 照片容器：让邮戳可以叠在照片上 */
+.photo-frame {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+/* 照片保持原来的显示效果 */
+.photo-frame .travel-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 复古旅行邮戳 */
+.photo-postmark {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 2px dashed #a75b45;
+  border-radius: 50%;
+  background: rgba(248, 241, 230, 0.92);
+  color: #a75b45;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-align: center;
+  transform: rotate(-10deg);
+  box-shadow: 0 1px 5px rgba(50, 30, 20, 0.12);
+}
+
+.stamp-no {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.stamp-city {
+  white-space: nowrap;
+}
+
+.stamp-date {
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* 手机屏幕上稍微缩小邮戳 */
+@media (max-width: 600px) {
+  .photo-postmark {
+    right: 8px;
+    bottom: 8px;
+    padding: 9px 10px;
+    font-size: 9px;
+  }
+
+  .stamp-no {
+    font-size: 11px;
+  }
+
+  .stamp-date {
+    font-size: 9px;
+  }
+}
   </style>
 </head>
 
@@ -194,11 +264,19 @@
 
   <main>
     <section class="postcard">
-      <img
-        class="travel-photo"
-        src="https://raw.githubusercontent.com/1939672550-blip/our-travel-postcards/main/first-trip.jpg/ab7c6e21djfc04e7cad9c3086203dd0f.JPG"
-        alt="我们的第一次旅行风景"
-      >
+     <div class="photo-frame">
+  <img
+    class="travel-photo"
+    src="https://raw.githubusercontent.com/1939672550-blip/our-travel-postcards/main/first-trip.jpg/ab7c6e21djfc04e7cad9c3086203dd0f.JPG"
+    alt="我们的第一次旅行风景"
+  />
+
+  <div class="photo-postmark">
+    <span class="stamp-no">NO. 001</span>
+    <span class="stamp-city">CHANGSHA · 长沙</span>
+    <span class="stamp-date">2022.02.17</span>
+  </div>
+</div>
 
       
 <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; margin:0 0 24px; padding:12px; border:2px dashed #a58b6b; border-radius:6px; color:#8b7258; font-size:13px; letter-spacing:1px;">
