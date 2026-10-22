@@ -6,6 +6,10 @@
   <title>把每次见面都变成明信片</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #f3ead8;
@@ -17,6 +21,7 @@
       text-align: center;
       padding: 50px 20px 30px;
     }
+
     .stamp {
       display: inline-block;
       border: 1px dashed #8b7258;
@@ -50,70 +55,70 @@
       background: #fffaf0;
       padding: 18px;
       box-shadow: 0 8px 25px #79684a20;
-      transform: rotate(0deg);
       border: 1px solid #e1d4bd;
     }
 
     .travel-photo {
-  display: block;
-  width: 100%;
-  height: auto;
-max-height: 420px;
-object-fit: contain;
-  border: 1px solid #e1d4bd;
-  box-sizing: border-box;
-}
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      object-position: center;
+      border: 1px solid #e1d4bd;
     }
-.postmark {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 14px;
-  margin: 8px 0 22px;
-  padding-bottom: 14px;
-  border-bottom: 1px dashed #c9b69a;
-  color: #8b7258;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-.postmark-number {
-  border: 1px dashed #a58b6b;
-  padding: 5px 8px;
-}
-
-.postmark-city {
-  font-size: 13px;
-}
-
-.postmark-date {
-  margin-left: auto;
-  font-family: Georgia, serif;
-}
 
     .caption {
       padding: 20px 8px 10px;
     }
 
+    .postmark {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 12px;
+      margin: 0 0 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed #c9b69a;
+      color: #8b7258;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
+
+    .postmark-number {
+      display: inline-block;
+      border: 1px dashed #a58b6b;
+      padding: 6px 9px;
+      border-radius: 2px;
+    }
+
+    .postmark-city {
+      font-size: 13px;
+    }
+
+    .postmark-date {
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
     .caption h2 {
       font-weight: normal;
       font-size: 25px;
-    }
-
-    .date {
-      color: #99836a;
-      font-size: 13px;
+      line-height: 1.6;
+      margin: 0 0 18px;
     }
 
     .message {
       line-height: 2;
       font-size: 15px;
+      margin: 0 0 14px;
     }
 
     .memories {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      margin-top: 55px;
+      margin-top: 45px;
     }
 
     .memory {
@@ -127,6 +132,11 @@ object-fit: contain;
       font-size: 20px;
     }
 
+    .memory p {
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
     footer {
       text-align: center;
       padding: 45px 20px;
@@ -135,17 +145,41 @@ object-fit: contain;
       line-height: 2;
     }
 
-    
-@media (max-width: 600px) {
-  header {
-    padding-top: 35px;
-  }
+    @media (max-width: 600px) {
+      header {
+        padding-top: 35px;
+      }
 
-  .travel-photo {
-    height: auto;
-    max-height: 320px;
-  }
-}
+      main {
+        padding: 14px;
+      }
+
+      .postcard {
+        padding: 12px;
+      }
+
+      .travel-photo {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+      }
+
+      .caption {
+        padding: 18px 4px 8px;
+      }
+
+      .caption h2 {
+        font-size: 23px;
+      }
+
+      .message {
+        font-size: 14px;
+      }
+
+      .postmark-date {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 
@@ -165,46 +199,49 @@ object-fit: contain;
         src="https://raw.githubusercontent.com/1939672550-blip/our-travel-postcards/main/first-trip.jpg/ab7c6e21djfc04e7cad9c3086203dd0f.JPG"
         alt="我们的第一次旅行风景"
       >
-<div class="caption">
-  <div class="postmark">
-    <span class="postmark-number">NO. 001</span>
-    <span class="postmark-city">CHANGSHA · 长沙</span>
-    <span class="postmark-date">2022.02.17</span>
-  </div>
-  <h2>长沙，四个人的第一次</h2>
 
-  <p class="message">
-    如果青春有一段可以反复播放的片段，
-    我想，那一定有长沙的这一幕。
-  </p>
+      <div class="caption">
+        <div class="postmark">
+          <span class="postmark-number">NO. 001</span>
+          <span class="postmark-city">CHANGSHA · 长沙</span>
+          <span class="postmark-date">2022.02.17</span>
+        </div>
 
-  <p class="message">
-    2022年2月17日，我们第一次独自出发去旅行。
-    和喜欢的人，也和最好的闺蜜，四个人一起，
-    把期待已久的同行变成了现实。
-  </p>
+        <h2>长沙，四个人的第一次</h2>
 
-  <p class="message">
-    我们买下了乐高情侣挂件，在橘子洲头留下了情侣合照，
-    又钻进热闹的大排档，让一顿好吃的饭替这一天画上句号。
-  </p>
+        <p class="message">
+          如果青春有一段可以反复播放的片段，
+          我想，那一定有长沙的这一幕。
+        </p>
 
-  <p class="message">
-    那时候的我们，好像总有做不完的第一次。
-    第一次一起去远方，第一次把喜欢变成看得见的小物件，
-    第一次发现，原来快乐也可以是四个人的。
-  </p>
+        <p class="message">
+          2022年2月17日，我们第一次独自出发去旅行。
+          和喜欢的人，也和最好的闺蜜，四个人一起，
+          把期待已久的同行变成了现实。
+        </p>
 
-  <p class="message">
-    后来才明白，旅行真正留下的，不只是去过的地方，
-    而是那些当时觉得平常、后来却舍不得忘记的瞬间。
-  </p>
+        <p class="message">
+          我们买下了乐高情侣挂件，在橘子洲头留下了情侣合照，
+          又钻进热闹的大排档，让一顿好吃的饭替这一天画上句号。
+        </p>
 
-  <p class="message">
-    长沙是故事发生的地方，而那天的我们，
-    才是这张明信片真正想收藏的风景。♡
-  </p>
-</div>
+        <p class="message">
+          那时候的我们，好像总有做不完的第一次。
+          第一次一起去远方，第一次把喜欢变成看得见的小物件，
+          第一次发现，原来快乐也可以是四个人的。
+        </p>
+
+        <p class="message">
+          后来才明白，旅行真正留下的，不只是去过的地方，
+          而是那些当时觉得平常、后来却舍不得忘记的瞬间。
+        </p>
+
+        <p class="message">
+          长沙是故事发生的地方，而那天的我们，
+          才是这张明信片真正想收藏的风景。♡
+        </p>
+      </div>
+    </section>
 
     <section class="memories">
       <article class="memory">
