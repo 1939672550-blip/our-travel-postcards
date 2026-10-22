@@ -58,6 +58,19 @@
       border: 1px solid #e1d4bd;
     }
 
+/* 旅行明信片收藏墙 */
+.postcard-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 32px;
+  align-items: start;
+}
+
+/* 每张明信片作为独立卡片展示 */
+.postcard-wall .postcard {
+  min-width: 0;
+  margin: 0;
+}
     .travel-photo {
       display: block;
       width: 100%;
@@ -262,6 +275,7 @@
   </header>
 
   <main>
+    <div class="postcard-wall">
     <section class="postcard">
      <div class="photo-frame">
   <img
@@ -320,7 +334,7 @@
         </p>
       </div>
     </section>
-
+</div>
     <section class="memories">
       <article class="memory">
         <div>✈️ TRAVEL</div>
