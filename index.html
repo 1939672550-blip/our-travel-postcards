@@ -55,24 +55,13 @@
       border: 1px solid #e1d4bd;
     }
 
-    .photo-placeholder {
-      .travel-photo {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-  border: 1px solid #e1d4bd;
-}
-      min-height: 260px;
-      background: #d9d1bf;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #665945;
-      padding: 20px;
+    .travel-photo {
+      display: block;
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border: 1px solid #e1d4bd;
       box-sizing: border-box;
-      line-height: 2;
     }
 
     .caption {
@@ -125,8 +114,8 @@
         padding-top: 35px;
       }
 
-      .photo-placeholder {
-        min-height: 200px;
+      .travel-photo {
+        height: 240px;
       }
     }
   </style>
@@ -143,11 +132,21 @@
 
   <main>
     <section class="postcard">
-    <img
-  class="travel-photo"
- src="https://raw.githubusercontent.com/1939672550-blip/our-travel-postcards/main/first-trip.jpg/ab7c6e21djfc04e7cad9c3086203dd0f.JPG"
-  alt="我们的第一次旅行风景"
-/>
+      <img
+        class="travel-photo"
+        src="https://raw.githubusercontent.com/1939672550-blip/our-travel-postcards/main/first-trip.jpg/ab7c6e21djfc04e7cad9c3086203dd0f.JPG"
+        alt="我们的第一次旅行风景"
+      >
+
+      <div class="caption">
+        <h2>我们的第一次旅行</h2>
+        <p class="date">A MEMORY TO KEEP</p>
+        <p class="message">
+          原来最好的风景，不只是抵达了哪里，
+          而是那一天，身边的人刚好是你。
+        </p>
+      </div>
+    </section>
 
     <section class="memories">
       <article class="memory">
