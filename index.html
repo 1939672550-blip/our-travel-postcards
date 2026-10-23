@@ -441,6 +441,40 @@
     padding: 15px;
   }
 }
+    
+/* 时间轴：左侧照片，右侧故事 */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.timeline-photo {
+  flex: 0 0 130px;
+  width: 130px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 4px solid #fffdf8;
+  box-shadow: 0 3px 12px rgba(91, 66, 45, 0.12);
+}
+
+.timeline-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .timeline-item {
+    gap: 12px;
+  }
+
+  .timeline-photo {
+    flex-basis: 100px;
+    width: 100px;
+    height: 125px;
+  }
+}
   </style>
 </head>
 
@@ -477,15 +511,18 @@
         <h3>长沙 · 四个人的第一次</h3>
         <p>第一次一起独立旅行，把青春和快乐留在长沙的街头。</p>
       </div>
-    </article>
-
-    <article class="timeline-item">
-      <span class="timeline-date">2022.08.11</span>
-      <div class="timeline-content">
-        <h3>东山岛 · 第一次一起看日出</h3>
-        <p>骑着小电驴追风，在海边等一场属于我们的日出。</p>
-      </div>
-    </article>
+<article class="timeline-item">
+  <img
+    class="timeline-photo"
+    src="./dongshan-island.jpg"
+    alt="2022年东山岛旅行"
+  />
+  <div class="timeline-content">
+    <span class="timeline-date">2022.08.11</span>
+    <h3>东山岛 · 第一次一起看日出</h3>
+    <p>骑着小电驴追风，在海边等一场属于我们的日出。</p>
+  </div>
+</article>
   </div>
 </section>
    <div class="postcard-wall" id="postcards">
