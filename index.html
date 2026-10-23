@@ -327,6 +327,120 @@
         gap: 16px;
       }
     }
+    
+/* 旅行时间轴 */
+.timeline-section {
+  max-width: 900px;
+  margin: 50px auto 70px;
+  padding: 30px 24px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-kicker {
+  color: #a75b45;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  margin: 12px 0;
+  color: #6f5142;
+  font-size: 28px;
+}
+
+.section-heading p {
+  color: #8a7b6b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.timeline {
+  max-width: 650px;
+  margin: 0 auto;
+  padding-left: 28px;
+  border-left: 2px solid #dfc7b3;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 4px 0 4px 22px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #a75b45;
+  border: 4px solid #f8f2e9;
+  box-shadow: 0 0 0 1px #d7b5a1;
+}
+
+.timeline-date {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #a75b45;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.timeline-content {
+  padding: 18px 20px;
+  background: #fffdf8;
+  border: 1px solid #eadfd1;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(91, 66, 45, 0.05);
+}
+
+.timeline-content h3 {
+  margin: 0 0 10px;
+  color: #6f5142;
+  font-size: 17px;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #817366;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+@media (max-width: 600px) {
+  .timeline-section {
+    padding: 24px 18px;
+    margin: 30px auto 45px;
+  }
+
+  .section-heading h2 {
+    font-size: 23px;
+  }
+
+  .timeline {
+    padding-left: 22px;
+  }
+
+  .timeline-item {
+    padding-left: 17px;
+  }
+
+  .timeline-item::before {
+    left: -30px;
+  }
+
+  .timeline-content {
+    padding: 15px;
+  }
+}
   </style>
 </head>
 
@@ -348,6 +462,32 @@
   </header>
 
   <main>
+    
+<section class="timeline-section" id="timeline">
+  <div class="section-heading">
+    <span class="section-kicker">OUR JOURNEY</span>
+    <h2>我们的旅行时间轴</h2>
+    <p>从第一次出发，到后来一起收藏的每一段风景。</p>
+  </div>
+
+  <div class="timeline">
+    <article class="timeline-item">
+      <span class="timeline-date">2022.02.17</span>
+      <div class="timeline-content">
+        <h3>长沙 · 四个人的第一次</h3>
+        <p>第一次一起独立旅行，把青春和快乐留在长沙的街头。</p>
+      </div>
+    </article>
+
+    <article class="timeline-item">
+      <span class="timeline-date">2022.08.11</span>
+      <div class="timeline-content">
+        <h3>东山岛 · 第一次一起看日出</h3>
+        <p>骑着小电驴追风，在海边等一场属于我们的日出。</p>
+      </div>
+    </article>
+  </div>
+</section>
    <div class="postcard-wall" id="postcards">
     <section class="postcard">
      <div class="photo-frame">
