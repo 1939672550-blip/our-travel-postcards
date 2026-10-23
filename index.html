@@ -274,10 +274,71 @@
     font-size: 9px;
   }
 }
+        .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 5%;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #e7dccb;
+      background: rgba(255, 253, 248, 0.95);
+    }
+
+    .nav-logo {
+      color: #a75b45;
+      font-family: Georgia, serif;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #6f6255;
+      font-size: 14px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a75b45;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (max-width: 600px) {
+      .top-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+    }
   </style>
 </head>
 
 <body>
+    <nav class="top-nav">
+    <a class="nav-logo" href="#home">我们的旅行明信片</a>
+    <div class="nav-links">
+      <a href="#home">首页</a>
+      <a href="#timeline">旅行时间轴</a>
+      <a href="#postcards">明信片收藏</a>
+    </div>
+  </nav>
   <header>
     <div class="stamp">OUR TRAVEL POSTCARDS · EST. 2026</div>
 
